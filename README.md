@@ -1,2 +1,2 @@
 # bision
-bision 팀프로젝트
+bision 팀프로젝트~~
