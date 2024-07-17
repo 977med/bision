@@ -1,0 +1,33 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+spring:
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(LPpesE/vPteqNciOcNNKXDsPvpHXGOy7UMWM7kIobDaWrXj6Pd44ruX34rw0lee3TnVXy2yDSQXuLIac4Eu3cggKfGtw7DO0+UVDtGSZvVBpiOOERwvf0ggpVHPFsRT8POlgn+N0WtsD9eOlluSf+A==)
+    username: ENC(cIRCqV5zMSICi6JjCPvwZzF0tpN05mbe)
+    password: ENC(M8tjFMWjs3f/E6nJFBQRTPRi2zAqtZ8096fI8RV/ldc=)
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        "[format_sql]": true
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+
+  # jasypt
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
