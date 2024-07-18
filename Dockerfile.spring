@@ -1,7 +1,0 @@
-FROM openjdk:17-jdk-slim
-
-WORKDIR /app
-
-COPY build/libs/mini-0.0.1-SNAPSHOT.jar /app/mini-0.0.1-SNAPSHOT.jar
-
-CMD ["java", "-jar", "mini-0.0.1-SNAPSHOT.jar"]                                                            
